@@ -6,5 +6,6 @@
 - Owing to computational limitations, I could only use a small subset of their CoT rational, around 5000 datapoints.
 - I employed the LoRA or Low-Rank Adaptation approach to make the finetuning process more efficient, implemented through the peft module by HuggingFace.
 - The training and some testing notebooks are found in this repository whereas my finetuned model can be found on HuggingFace through this [link](https://huggingface.co/akashvshroff/mistral-7b-math).
-  
-- In terms of improvement, I think the most important thing to do would be to perform more fine-tuning, using a larger subset of the MathInstruct dataset as well as more training epochs.
+- Below, you can see a basic example of how the finetuning improved the mathematical reasoning ability of the model vis-a-vis the base model. While there may not be much merit in checking the computational ability of the model, the difference in reasoning is noticeable. Coupling this finetuning with a general instruction dataset could lead to a truly capable math model.
+  ![model result 2](https://github.com/akashvshroff/MathGPT/assets/63399889/e039ce63-6487-43fb-b8bd-d1d006a12364)
+- In terms of improvement, I think the most important thing to do would be to perform more fine-tuning, using a larger subset of the MathInstruct dataset as well as more training epochs. Moreover, since this is finetuning done on the base model, we could also couple this with other finetuned versions of the base model - perhaps with a general instruction set to improve its conversational ability.
